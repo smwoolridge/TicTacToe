@@ -15,19 +15,21 @@ MainWindow::~MainWindow()
 
 bool MainWindow::checkForWinner(int buttonClicked[], int player)
 {
-    bool winning = true;
+    bool win = true;
     for(int i = 0; i < 8; i++){
-        for(int j = 0; i < 3; j++){
+        for(int j = 0; j < 3; j++){
             if(buttonClicked[winCombinations[i][j]] != player){
-                winning = false;
+                win = false;
                 break;
             }
         }
-        if(winning){
+        if(win){
             // set winning player name
+            ui->winnerLabel->setText("Winner: ");
+            ui->playerLabel->setText("Player " + QString::number(player));
             return true;
         }
-        winning = true;
+        win = true;
     }
     return false;
 }
@@ -85,6 +87,72 @@ void MainWindow::on_pushButton_4_clicked()
         ui->pushButton_4->setText("X");
        } else if (player == 2){
         ui->pushButton_4->setText("O");
+    }
+    checkForWinner(buttonClicked, player);
+}
+
+void MainWindow::on_pushButton_9_clicked()
+{
+    int player = playerTurn(3);
+    if(player == 1){
+        ui->pushButton_9->setText("X");
+       } else if (player == 2){
+        ui->pushButton_9->setText("O");
+    }
+    checkForWinner(buttonClicked, player);
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    int player = playerTurn(4);
+    if(player == 1){
+        ui->pushButton_3->setText("X");
+       } else if (player == 2){
+        ui->pushButton_3->setText("O");
+    }
+    checkForWinner(buttonClicked, player);
+}
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    int player = playerTurn(5);
+    if(player == 1){
+        ui->pushButton_5->setText("X");
+       } else if (player == 2){
+        ui->pushButton_5->setText("O");
+    }
+    checkForWinner(buttonClicked, player);
+}
+
+void MainWindow::on_pushButton_8_clicked()
+{
+    int player = playerTurn(6);
+    if(player == 1){
+        ui->pushButton_8->setText("X");
+       } else if (player == 2){
+        ui->pushButton_8->setText("O");
+    }
+    checkForWinner(buttonClicked, player);
+}
+
+void MainWindow::on_pushButton_7_clicked()
+{
+    int player = playerTurn(7);
+    if(player == 1){
+        ui->pushButton_7->setText("X");
+       } else if (player == 2){
+        ui->pushButton_7->setText("O");
+    }
+    checkForWinner(buttonClicked, player);
+}
+
+void MainWindow::on_pushButton_6_clicked()
+{
+    int player = playerTurn(8);
+    if(player == 1){
+        ui->pushButton_6->setText("X");
+       } else if (player == 2){
+        ui->pushButton_6->setText("O");
     }
     checkForWinner(buttonClicked, player);
 }
