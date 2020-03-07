@@ -13,6 +13,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+/*
 bool MainWindow::checkForWinner(int buttonClicked[], int player)
 {
     bool win = true;
@@ -156,3 +157,4 @@ void MainWindow::on_pushButton_6_clicked()
     }
     checkForWinner(buttonClicked, player);
 }
+*/
