@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QPushButton" name="pushButton_4">
@@ -119,7 +119,7 @@
        <string>Level 1</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_7">
+     <widget class="QPushButton" name="pushButton0">
       <property name="geometry">
        <rect>
         <x>120</x>
@@ -129,10 +129,10 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_8">
+     <widget class="QPushButton" name="pushButton8">
       <property name="geometry">
        <rect>
         <x>360</x>
@@ -142,10 +142,10 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_9">
+     <widget class="QPushButton" name="pushButton7">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -155,10 +155,10 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_10">
+     <widget class="QPushButton" name="pushButton6">
       <property name="geometry">
        <rect>
         <x>120</x>
@@ -168,10 +168,10 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_11">
+     <widget class="QPushButton" name="pushButton4">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -181,10 +181,10 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_12">
+     <widget class="QPushButton" name="pushButton5">
       <property name="geometry">
        <rect>
         <x>360</x>
@@ -194,10 +194,10 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_13">
+     <widget class="QPushButton" name="pushButton3">
       <property name="geometry">
        <rect>
         <x>120</x>
@@ -207,10 +207,10 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_14">
+     <widget class="QPushButton" name="pushButton2">
       <property name="geometry">
        <rect>
         <x>360</x>
@@ -220,10 +220,10 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_15">
+     <widget class="QPushButton" name="pushButton1">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -233,7 +233,33 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="winnerLabel">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>230</y>
+        <width>47</width>
+        <height>14</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="playerTurnLabel">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>230</y>
+        <width>47</width>
+        <height>14</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
       </property>
      </widget>
     </widget>
@@ -303,7 +329,7 @@
      <x>0</x>
      <y>0</y>
      <width>600</width>
-     <height>25</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

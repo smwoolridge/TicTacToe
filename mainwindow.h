@@ -19,23 +19,25 @@ public:
      bool checkForWinner(int buttonClicked[], int player);
 
 private slots:
-     void on_pushButton_clicked();
 
-     void on_pushButton_2_clicked();
 
-     void on_pushButton_4_clicked();
+     void on_pushButton0_clicked();
 
-     void on_pushButton_9_clicked();
+     void on_pushButton1_clicked();
 
-     void on_pushButton_3_clicked();
+     void on_pushButton2_clicked();
 
-     void on_pushButton_5_clicked();
+     void on_pushButton3_clicked();
 
-     void on_pushButton_8_clicked();
+     void on_pushButton4_clicked();
 
-     void on_pushButton_7_clicked();
+     void on_pushButton5_clicked();
 
-     void on_pushButton_6_clicked();
+     void on_pushButton6_clicked();
+
+     void on_pushButton7_clicked();
+
+     void on_pushButton8_clicked();
 
 private:
     Ui::MainWindow *ui;
@@ -45,6 +47,11 @@ private:
     int playerTurn (int index);
 
     int winCombinations[8][3] = {{0,3,6}, {0,1,2}, {2,5,8}, {6,7,8}, {0,4,8},{2,4,6},{3,4,5}, {1,4,7}};
+    void gameReset();
+    bool gameIsDone = false;
+    void easyLevelAi(int player);
+    void mediumLevelAi();
+    void hardLevelAi();
 
 };
 
