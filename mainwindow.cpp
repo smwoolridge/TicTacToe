@@ -6,9 +6,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    if(ui->onePlayerButton->isChecked() || ui->twoPlayerButton->isChecked()){
-        ui->stackedWidget->setCurrentIndex(0);
-    }
 
 
 }
@@ -21,6 +18,8 @@ MainWindow::~MainWindow()
 
 bool MainWindow::checkForWinner(int buttonClicked[], int player)
 {
+    QString playerOne = ui->playerOneTextEdit->toPlainText();
+    QString playerTwo = ui->playerTwoTextEdit->toPlainText();
     bool win = true;
     for(int i = 0; i < 8; i++){
         for(int j = 0; j < 3; j++){
@@ -32,7 +31,11 @@ bool MainWindow::checkForWinner(int buttonClicked[], int player)
         if(win){
             // set winning player name
             ui->winnerLabel->setText("Winner: ");
-            ui->playerTurnLabel->setText("Player " + QString::number(player));
+            if(player == 1){
+            ui->playerTurnLabel->setText(playerOne);
+            } else {
+            ui->playerTurnLabel->setText(playerTwo);
+            }
             return true;
         }
         win = true;
@@ -42,6 +45,9 @@ bool MainWindow::checkForWinner(int buttonClicked[], int player)
 
 int MainWindow::playerTurn(int index)
 {
+    //set player name
+    QString playerOne = ui->playerOneTextEdit->toPlainText();
+    QString playerTwo = ui->playerTwoTextEdit->toPlainText();
     // check array index
     if(buttonClicked[index] == 0){
         clickCount++;
@@ -49,13 +55,13 @@ int MainWindow::playerTurn(int index)
         switch(checkPlayer){
         case 1:
             // switch label to player 2
-            ui->playerTurnLabel->setText("player 2");
+            ui->playerTurnLabel->setText(playerTwo);
             //change current index 1
             buttonClicked[index] = 1;
             return 1;
         case 0:
             // switch label to player 1
-            ui->playerTurnLabel->setText("player 1");
+            ui->playerTurnLabel->setText(playerOne);
             // change current index 2
             buttonClicked[index] = 2;
             return 2;
@@ -67,6 +73,7 @@ int MainWindow::playerTurn(int index)
 // if there is a winner reset the game
 void MainWindow::gameReset()
 {
+    QString playerOne = ui->playerOneTextEdit->toPlainText();
     //set click count to 0 and button index to 0
     clickCount = 0;
     for(int i = 0; i < 9; i++){
@@ -81,7 +88,7 @@ void MainWindow::gameReset()
         buttonArray[i]->setText("");
     }
     // reset the player turn and remove winner word label
-    ui->playerTurnLabel->setText("Player 1");
+    ui->playerTurnLabel->setText(playerOne);
     ui->winnerLabel->setText("");
     //put game is done back to false after called
     gameIsDone = false;
@@ -136,21 +143,6 @@ void MainWindow::on_pushButton0_clicked()
         gameReset();
     }
     int player = playerTurn(0);
-    // player 1 is human
-    if(ui->onePlayerButton->isChecked()){
-        if(player == 1){
-            ui->pushButton0->setText("X");
-           } else if (player == 2){
-            // called the ai function for player 2
-            easyLevelAi();
-
-        }
-        //check for winner
-       gameIsDone = checkForWinner(buttonClicked, player);
-
-        // button is not connect yet so I can't test it
-       // normal game between two players
-    } else if (ui->twoPlayerButton->isChecked()){
         if(player == 1){
             ui->pushButton0->setText("X");
            } else if (player == 2){
@@ -159,7 +151,7 @@ void MainWindow::on_pushButton0_clicked()
         gameIsDone = checkForWinner(buttonClicked, player);
 }
 
-}
+
 
 void MainWindow::on_pushButton1_clicked()
 {
@@ -167,17 +159,6 @@ void MainWindow::on_pushButton1_clicked()
         gameReset();
     }
     int player = playerTurn(1);
-    if(ui->onePlayerButton->isChecked()){
-        if(player == 1){
-            ui->pushButton0->setText("X");
-           } else if (player == 2){
-            // called the ai function for player 2
-            easyLevelAi();
-        }
-        //check for winner
-       gameIsDone = checkForWinner(buttonClicked, player);
-
-    } else if (ui->twoPlayerButton->isChecked()){
         if(player == 1){
             ui->pushButton1->setText("X");
            } else if (player == 2){
@@ -185,7 +166,7 @@ void MainWindow::on_pushButton1_clicked()
         }
        gameIsDone = checkForWinner(buttonClicked, player);
 }
-}
+
 
 void MainWindow::on_pushButton2_clicked()
 {
@@ -193,17 +174,6 @@ void MainWindow::on_pushButton2_clicked()
         gameReset();
     }
     int player = playerTurn(2);
-    if(ui->onePlayerButton->isChecked()){
-        if(player == 1){
-            ui->pushButton0->setText("X");
-           } else if (player == 2){
-            // called the ai function for player 2
-            easyLevelAi();
-        }
-        //check for winner
-       gameIsDone = checkForWinner(buttonClicked, player);
-
-    } else if (ui->twoPlayerButton->isChecked()){
         if(player == 1){
             ui->pushButton2->setText("X");
            } else if (player == 2){
@@ -211,7 +181,7 @@ void MainWindow::on_pushButton2_clicked()
         }
         gameIsDone = checkForWinner(buttonClicked, player);
 }
-}
+
 
 void MainWindow::on_pushButton3_clicked()
 {
@@ -219,17 +189,6 @@ void MainWindow::on_pushButton3_clicked()
         gameReset();
     }
     int player = playerTurn(3);
-    if(ui->onePlayerButton->isChecked()){
-        if(player == 1){
-            ui->pushButton0->setText("X");
-           } else if (player == 2){
-            // called the ai function for player 2
-            easyLevelAi();
-        }
-        //check for winner
-       gameIsDone = checkForWinner(buttonClicked, player);
-
-    } else if (ui->twoPlayerButton->isChecked()){
         if(player == 1){
             ui->pushButton3->setText("X");
            } else if (player == 2){
@@ -237,7 +196,9 @@ void MainWindow::on_pushButton3_clicked()
         }
         gameIsDone = checkForWinner(buttonClicked, player);
 }
-}
+
+
+
 
 void MainWindow::on_pushButton4_clicked()
 {
@@ -245,17 +206,6 @@ void MainWindow::on_pushButton4_clicked()
         gameReset();
     }
     int player = playerTurn(4);
-    if(ui->onePlayerButton->isChecked()){
-        if(player == 1){
-            ui->pushButton0->setText("X");
-           } else if (player == 2){
-            // called the ai function for player 2
-            easyLevelAi();
-        }
-        //check for winner
-       gameIsDone = checkForWinner(buttonClicked, player);
-
-    } else if (ui->twoPlayerButton->isChecked()){
         if(player == 1){
             ui->pushButton4->setText("X");
            } else if (player == 2){
@@ -263,7 +213,7 @@ void MainWindow::on_pushButton4_clicked()
         }
        gameIsDone =  checkForWinner(buttonClicked, player);
 }
-}
+
 
 void MainWindow::on_pushButton5_clicked()
 {
@@ -271,17 +221,6 @@ void MainWindow::on_pushButton5_clicked()
         gameReset();
     }
     int player = playerTurn(5);
-    if(ui->onePlayerButton->isChecked()){
-        if(player == 1){
-            ui->pushButton0->setText("X");
-           } else if (player == 2){
-            // called the ai function for player 2
-            easyLevelAi();
-        }
-        //check for winner
-       gameIsDone = checkForWinner(buttonClicked, player);
-
-    } else if (ui->twoPlayerButton->isChecked()){
         if(player == 1){
             ui->pushButton5->setText("X");
            } else if (player == 2){
@@ -289,7 +228,7 @@ void MainWindow::on_pushButton5_clicked()
         }
        gameIsDone = checkForWinner(buttonClicked, player);
 }
-}
+
 
 void MainWindow::on_pushButton6_clicked()
 {
@@ -297,17 +236,6 @@ void MainWindow::on_pushButton6_clicked()
         gameReset();
     }
     int player = playerTurn(6);
-    if(ui->onePlayerButton->isChecked()){
-        if(player == 1){
-            ui->pushButton0->setText("X");
-           } else if (player == 2){
-            // called the ai function for player 2
-            easyLevelAi();
-        }
-        //check for winner
-       gameIsDone = checkForWinner(buttonClicked, player);
-
-    } else if (ui->twoPlayerButton->isChecked()){
         if(player == 1){
             ui->pushButton6->setText("X");
            } else if (player == 2){
@@ -315,7 +243,7 @@ void MainWindow::on_pushButton6_clicked()
         }
        gameIsDone =  checkForWinner(buttonClicked, player);
 }
-}
+
 
 void MainWindow::on_pushButton7_clicked()
 {
@@ -323,17 +251,6 @@ void MainWindow::on_pushButton7_clicked()
         gameReset();
     }
     int player = playerTurn(7);
-    if(ui->onePlayerButton->isChecked()){
-        if(player == 1){
-            ui->pushButton0->setText("X");
-           } else if (player == 2){
-            // called the ai function for player 2
-            easyLevelAi();
-        }
-        //check for winner
-       gameIsDone = checkForWinner(buttonClicked, player);
-
-    } else if (ui->twoPlayerButton->isChecked()){
         if(player == 1){
             ui->pushButton7->setText("X");
            } else if (player == 2){
@@ -341,7 +258,8 @@ void MainWindow::on_pushButton7_clicked()
         }
        gameIsDone = checkForWinner(buttonClicked, player);
 }
-}
+
+
 
 void MainWindow::on_pushButton8_clicked()
 {
@@ -349,17 +267,6 @@ void MainWindow::on_pushButton8_clicked()
         gameReset();
     }
     int player = playerTurn(8);
-    if(ui->onePlayerButton->isChecked()){
-        if(player == 1){
-            ui->pushButton0->setText("X");
-           } else if (player == 2){
-            // called the ai function for player 2
-            easyLevelAi();
-        }
-        //check for winner
-       gameIsDone = checkForWinner(buttonClicked, player);
-
-    } else if (ui->twoPlayerButton->isChecked()){
         if(player == 1){
             ui->pushButton8->setText("X");
            } else if (player == 2){
@@ -367,4 +274,34 @@ void MainWindow::on_pushButton8_clicked()
         }
        gameIsDone = checkForWinner(buttonClicked, player);
 }
+
+
+void MainWindow::on_onePlayerButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+void MainWindow::on_twoPlayerButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+void MainWindow::on_easyButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+void MainWindow::on_mediumButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+void MainWindow::on_hardButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+void MainWindow::on_startButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
 }

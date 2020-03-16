@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QPushButton" name="easyButton">
@@ -117,7 +117,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_81">
+     <widget class="QPushButton" name="backButton">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -128,6 +128,19 @@
       </property>
       <property name="text">
        <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="startButton">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>770</y>
+        <width>60</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Start</string>
       </property>
      </widget>
     </widget>

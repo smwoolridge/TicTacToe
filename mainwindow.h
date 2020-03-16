@@ -39,6 +39,18 @@ private slots:
 
      void on_pushButton8_clicked();
 
+     void on_onePlayerButton_clicked();
+
+     void on_twoPlayerButton_clicked();
+
+     void on_easyButton_clicked();
+
+     void on_mediumButton_clicked();
+
+     void on_hardButton_clicked();
+
+     void on_startButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     int clickCount = 0;
