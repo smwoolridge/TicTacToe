@@ -49,7 +49,7 @@ private:
     int winCombinations[8][3] = {{0,3,6}, {0,1,2}, {2,5,8}, {6,7,8}, {0,4,8},{2,4,6},{3,4,5}, {1,4,7}};
     void gameReset();
     bool gameIsDone = false;
-    void easyLevelAi(int player);
+    int easyLevelAi();
     void mediumLevelAi();
     void hardLevelAi();
 

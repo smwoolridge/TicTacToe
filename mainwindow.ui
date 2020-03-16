@@ -562,7 +562,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_14">
@@ -575,7 +575,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_15">
@@ -588,7 +588,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_16">
@@ -601,7 +601,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_17">
@@ -614,7 +614,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_18">
@@ -627,7 +627,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_19">
@@ -640,7 +640,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_20">
@@ -653,7 +653,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_21">
@@ -666,7 +666,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_22">
@@ -679,7 +679,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_23">
@@ -692,7 +692,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_24">
@@ -705,7 +705,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_25">
@@ -718,7 +718,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_26">
@@ -731,7 +731,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_27">
@@ -744,7 +744,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_28">
@@ -757,7 +757,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_29">
@@ -770,7 +770,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_30">
@@ -783,7 +783,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_31">
@@ -796,7 +796,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_32">
@@ -809,7 +809,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_33">
@@ -822,7 +822,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_34">
@@ -835,7 +835,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_35">
@@ -848,7 +848,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_36">
@@ -861,7 +861,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_37">
@@ -874,7 +874,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_38">
@@ -887,7 +887,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_39">
@@ -900,7 +900,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_40">
@@ -913,7 +913,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_41">
@@ -926,7 +926,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_42">
@@ -939,7 +939,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_43">
@@ -952,7 +952,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_44">
@@ -965,7 +965,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_45">
@@ -978,7 +978,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_46">
@@ -991,7 +991,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_47">
@@ -1004,7 +1004,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_48">
@@ -1017,7 +1017,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_49">
@@ -1030,7 +1030,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_51">
@@ -1043,7 +1043,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_52">
@@ -1056,7 +1056,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_53">
@@ -1069,7 +1069,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_54">
@@ -1082,7 +1082,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_55">
@@ -1095,7 +1095,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_56">
@@ -1108,7 +1108,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_57">
@@ -1121,7 +1121,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_58">
@@ -1134,7 +1134,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_59">
@@ -1147,7 +1147,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_60">
@@ -1160,7 +1160,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_61">
@@ -1173,7 +1173,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_62">
@@ -1186,7 +1186,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_64">
@@ -1199,7 +1199,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_66">
@@ -1212,7 +1212,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_68">
@@ -1225,7 +1225,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_69">
@@ -1238,7 +1238,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_70">
@@ -1251,7 +1251,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_71">
@@ -1264,7 +1264,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_73">
@@ -1277,7 +1277,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_78">
@@ -1303,7 +1303,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_72">
@@ -1316,7 +1316,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_76">
@@ -1329,7 +1329,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_65">
@@ -1342,7 +1342,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_67">
@@ -1355,7 +1355,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_77">
@@ -1368,7 +1368,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_75">
@@ -1381,7 +1381,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_63">
@@ -1394,7 +1394,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>PushButton</string>
+       <string/>
       </property>
      </widget>
     </widget>
@@ -1415,7 +1415,7 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="onePlayerButton">
       <property name="geometry">
        <rect>
         <x>120</x>
@@ -1428,7 +1428,7 @@
        <string>One Player</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="twoPlayerButton">
       <property name="geometry">
        <rect>
         <x>120</x>
@@ -1463,7 +1463,7 @@
      <x>0</x>
      <y>0</y>
      <width>600</width>
-     <height>25</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
