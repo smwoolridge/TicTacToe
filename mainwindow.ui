@@ -24,10 +24,10 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="page">
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QPushButton" name="easyButton">
       <property name="geometry">
        <rect>
         <x>120</x>
@@ -40,7 +40,7 @@
        <string>Easy</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_5">
+     <widget class="QPushButton" name="mediumButton">
       <property name="geometry">
        <rect>
         <x>120</x>
@@ -53,7 +53,7 @@
        <string>Medium</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_6">
+     <widget class="QPushButton" name="hardButton">
       <property name="geometry">
        <rect>
         <x>120</x>
@@ -97,7 +97,7 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QTextEdit" name="textEdit">
+     <widget class="QTextEdit" name="playerOneTextEdit">
       <property name="geometry">
        <rect>
         <x>90</x>
@@ -107,7 +107,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QTextEdit" name="textEdit_2">
+     <widget class="QTextEdit" name="playerTwoTextEdit">
       <property name="geometry">
        <rect>
         <x>90</x>
