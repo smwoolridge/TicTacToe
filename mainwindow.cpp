@@ -81,9 +81,9 @@ void MainWindow::gameReset()
     }
 
     //clear button text label
-    QPushButton* buttonArray[] = {ui->pushButton0, ui->pushButton1, ui->pushButton2,
-                                 ui->pushButton3, ui->pushButton4, ui->pushButton5,
-                                 ui->pushButton6, ui->pushButton7, ui->pushButton8};
+    QPushButton* buttonArray[] = {ui->l1_00, ui->l1_10, ui->l1_20,
+                                 ui->l1_01, ui->l1_11, ui->l1_21,
+                                 ui->l1_02, ui->l1_12, ui->l1_22};
     for(int i = 0; i < 9 ; i++){
         buttonArray[i]->setText("");
     }
@@ -103,23 +103,23 @@ int MainWindow::easyLevelAi()
             return i;
                }
         if(i == 0){
-            ui->pushButton0->setText("O");
+            ui->l1_00->setText("O");
         } else if(i == 1){
-            ui->pushButton1->setText("O");
+            ui->l1_10->setText("O");
         } else if(i == 2){
-            ui->pushButton2->setText("O");
+            ui->l1_20->setText("O");
         } else if(i == 3){
-            ui->pushButton3->setText("O");
+            ui->l1_01->setText("O");
         } else if(i == 4){
-            ui->pushButton4->setText("O");
+            ui->l1_11->setText("O");
         } else if(i == 5){
-            ui->pushButton5->setText("O");
+            ui->l1_21->setText("O");
         } else if(i == 6){
-            ui->pushButton6->setText("O");
+            ui->l1_02->setText("O");
         } else if(i == 7){
-           ui->pushButton7->setText("O");
+           ui->l1_12->setText("O");
         } else if(i == 8){
-            ui->pushButton8->setText("O");
+            ui->l1_22->setText("O");
         }
         }
     }
@@ -137,143 +137,7 @@ void MainWindow::hardLevelAi()
 }
 
 
-void MainWindow::on_pushButton0_clicked()
-{
-    if(gameIsDone){
-        gameReset();
-    }
-    int player = playerTurn(0);
-        if(player == 1){
-            ui->pushButton0->setText("X");
-           } else if (player == 2){
-            ui->pushButton0->setText("O");
-        }
-        gameIsDone = checkForWinner(buttonClicked, player);
-}
 
-
-
-void MainWindow::on_pushButton1_clicked()
-{
-    if(gameIsDone){
-        gameReset();
-    }
-    int player = playerTurn(1);
-        if(player == 1){
-            ui->pushButton1->setText("X");
-           } else if (player == 2){
-            ui->pushButton1->setText("O");
-        }
-       gameIsDone = checkForWinner(buttonClicked, player);
-}
-
-
-void MainWindow::on_pushButton2_clicked()
-{
-    if(gameIsDone){
-        gameReset();
-    }
-    int player = playerTurn(2);
-        if(player == 1){
-            ui->pushButton2->setText("X");
-           } else if (player == 2){
-            ui->pushButton2->setText("O");
-        }
-        gameIsDone = checkForWinner(buttonClicked, player);
-}
-
-
-void MainWindow::on_pushButton3_clicked()
-{
-    if(gameIsDone){
-        gameReset();
-    }
-    int player = playerTurn(3);
-        if(player == 1){
-            ui->pushButton3->setText("X");
-           } else if (player == 2){
-            ui->pushButton3->setText("O");
-        }
-        gameIsDone = checkForWinner(buttonClicked, player);
-}
-
-
-
-
-void MainWindow::on_pushButton4_clicked()
-{
-    if(gameIsDone){
-        gameReset();
-    }
-    int player = playerTurn(4);
-        if(player == 1){
-            ui->pushButton4->setText("X");
-           } else if (player == 2){
-            ui->pushButton4->setText("O");
-        }
-       gameIsDone =  checkForWinner(buttonClicked, player);
-}
-
-
-void MainWindow::on_pushButton5_clicked()
-{
-    if(gameIsDone){
-        gameReset();
-    }
-    int player = playerTurn(5);
-        if(player == 1){
-            ui->pushButton5->setText("X");
-           } else if (player == 2){
-            ui->pushButton5->setText("O");
-        }
-       gameIsDone = checkForWinner(buttonClicked, player);
-}
-
-
-void MainWindow::on_pushButton6_clicked()
-{
-    if(gameIsDone){
-        gameReset();
-    }
-    int player = playerTurn(6);
-        if(player == 1){
-            ui->pushButton6->setText("X");
-           } else if (player == 2){
-            ui->pushButton6->setText("O");
-        }
-       gameIsDone =  checkForWinner(buttonClicked, player);
-}
-
-
-void MainWindow::on_pushButton7_clicked()
-{
-    if(gameIsDone){
-        gameReset();
-    }
-    int player = playerTurn(7);
-        if(player == 1){
-            ui->pushButton7->setText("X");
-           } else if (player == 2){
-            ui->pushButton7->setText("O");
-        }
-       gameIsDone = checkForWinner(buttonClicked, player);
-}
-
-
-
-void MainWindow::on_pushButton8_clicked()
-{
-    if(gameIsDone){
-        gameReset();
-    }
-    int player = playerTurn(8);
-        if(player == 1){
-            ui->pushButton8->setText("X");
-           } else if (player == 2){
-            ui->pushButton8->setText("O");
-        }
-       gameIsDone = checkForWinner(buttonClicked, player);
-}
 
 
 void MainWindow::on_onePlayerButton_clicked()
@@ -304,4 +168,130 @@ void MainWindow::on_hardButton_clicked()
 void MainWindow::on_startButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(2);
+}
+
+void MainWindow::on_l1_00_clicked()
+{
+    if(gameIsDone){
+        gameReset();
+    }
+    int player = playerTurn(0);
+        if(player == 1){
+            ui->l1_00->setText("X");
+           } else if (player == 2){
+            ui-> l1_00->setText("O");
+        }
+        gameIsDone = checkForWinner(buttonClicked, player);
+}
+
+void MainWindow::on_l1_10_clicked()
+{
+    if(gameIsDone){
+        gameReset();
+    }
+    int player = playerTurn(1);
+        if(player == 1){
+            ui->l1_10->setText("X");
+           } else if (player == 2){
+            ui-> l1_10->setText("O");
+        }
+        gameIsDone = checkForWinner(buttonClicked, player);
+}
+
+void MainWindow::on_l1_20_clicked()
+{
+    if(gameIsDone){
+        gameReset();
+    }
+    int player = playerTurn(2);
+        if(player == 1){
+            ui->l1_20->setText("X");
+           } else if (player == 2){
+            ui-> l1_20->setText("O");
+        }
+        gameIsDone = checkForWinner(buttonClicked, player);
+}
+
+void MainWindow::on_l1_01_clicked()
+{
+    if(gameIsDone){
+        gameReset();
+    }
+    int player = playerTurn(3);
+        if(player == 1){
+            ui->l1_01->setText("X");
+           } else if (player == 2){
+            ui-> l1_01->setText("O");
+        }
+        gameIsDone = checkForWinner(buttonClicked, player);
+}
+
+void MainWindow::on_l1_11_clicked()
+{
+    if(gameIsDone){
+        gameReset();
+    }
+    int player = playerTurn(4);
+        if(player == 1){
+            ui->l1_11->setText("X");
+           } else if (player == 2){
+            ui-> l1_11->setText("O");
+        }
+        gameIsDone = checkForWinner(buttonClicked, player);
+}
+
+void MainWindow::on_l1_21_clicked()
+{
+    if(gameIsDone){
+        gameReset();
+    }
+    int player = playerTurn(5);
+        if(player == 1){
+            ui->l1_21->setText("X");
+           } else if (player == 2){
+            ui-> l1_21->setText("O");
+        }
+        gameIsDone = checkForWinner(buttonClicked, player);
+}
+
+void MainWindow::on_l1_02_clicked()
+{
+    if(gameIsDone){
+        gameReset();
+    }
+    int player = playerTurn(6);
+        if(player == 1){
+            ui->l1_02->setText("X");
+           } else if (player == 2){
+            ui-> l1_02->setText("O");
+        }
+        gameIsDone = checkForWinner(buttonClicked, player);
+}
+
+void MainWindow::on_l1_12_clicked()
+{
+    if(gameIsDone){
+        gameReset();
+    }
+    int player = playerTurn(7);
+        if(player == 1){
+            ui->l1_12->setText("X");
+           } else if (player == 2){
+            ui-> l1_12->setText("O");
+        }
+        gameIsDone = checkForWinner(buttonClicked, player);
+}
+
+void MainWindow::on_l1_22_clicked()
+{
+    if(gameIsDone){
+        gameReset();
+    }
+    int player = playerTurn(8);
+        if(player == 1){
+            ui->l1_22->setText("X");
+           } else if (player == 2){
+            ui-> l1_22->setText("O");
+        }
+        gameIsDone = checkForWinner(buttonClicked, player);
 }

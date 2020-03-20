@@ -21,23 +21,6 @@ public:
 private slots:
 
 
-     void on_pushButton0_clicked();
-
-     void on_pushButton1_clicked();
-
-     void on_pushButton2_clicked();
-
-     void on_pushButton3_clicked();
-
-     void on_pushButton4_clicked();
-
-     void on_pushButton5_clicked();
-
-     void on_pushButton6_clicked();
-
-     void on_pushButton7_clicked();
-
-     void on_pushButton8_clicked();
 
      void on_onePlayerButton_clicked();
 
@@ -50,6 +33,24 @@ private slots:
      void on_hardButton_clicked();
 
      void on_startButton_clicked();
+
+     void on_l1_00_clicked();
+
+     void on_l1_10_clicked();
+
+     void on_l1_20_clicked();
+
+     void on_l1_01_clicked();
+
+     void on_l1_11_clicked();
+
+     void on_l1_21_clicked();
+
+     void on_l1_02_clicked();
+
+     void on_l1_12_clicked();
+
+     void on_l1_22_clicked();
 
 private:
     Ui::MainWindow *ui;
