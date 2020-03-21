@@ -31,11 +31,10 @@ bool MainWindow::checkForWinner(int buttonClicked[], int player)
         }
         if(win){
             // set winning player name
-            ui->winnerLabel->setText("Winner: ");
             if(player == 1){
-            ui->playerTurnLabel->setText(playerOne);
+            ui->level1_label->setText(playerOne + " Wins!");
             } else {
-            ui->playerTurnLabel->setText(playerTwo);
+            ui->level1_label->setText(playerTwo + " Wins!");
             }
             return true;
         }
@@ -49,20 +48,24 @@ int MainWindow::playerTurn(int index)
     //set player name
     QString playerOne = ui->playerOneTextEdit->toPlainText();
     QString playerTwo = ui->playerTwoTextEdit->toPlainText();
+    QFont customFont("Helvetica[Cronyx]", 12,75,false);
     // check array index
     if(buttonClicked[index] == 0){
         clickCount++;
         checkPlayer = clickCount % 2;
         switch(checkPlayer){
         case 1:
+
             // switch label to player 2
-            ui->playerTurnLabel->setText(playerTwo);
+            ui->level1_label->setText(playerTwo);
+            ui->level1_label->setFont(customFont);
             //change current index 1
             buttonClicked[index] = 1;
             return 1;
         case 0:
             // switch label to player 1
-            ui->playerTurnLabel->setText(playerOne);
+            ui->level1_label->setText(playerOne);
+            ui->level1_label->setFont(customFont);
             // change current index 2
             buttonClicked[index] = 2;
             return 2;
@@ -89,8 +92,8 @@ void MainWindow::gameReset()
         buttonArray[i]->setText("");
     }
     // reset the player turn and remove winner word label
-    ui->playerTurnLabel->setText(playerOne);
-    ui->winnerLabel->setText("");
+    ui->level1_label->setText(playerOne);
+
     //put game is done back to false after called
     gameIsDone = false;
 }
