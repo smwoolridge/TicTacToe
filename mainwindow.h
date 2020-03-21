@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QMessageBox>
+#include <QFont>
 
 namespace Ui {
 class MainWindow;
@@ -52,12 +54,21 @@ private slots:
 
      void on_l1_22_clicked();
 
+     void on_help_button_clicked();
+
+     void on_backButton_names_clicked();
+
 private:
     Ui::MainWindow *ui;
     int clickCount = 0;
     int buttonClicked [9] = {0,0,0,0,0,0,0,0,0};
     int checkPlayer;
     int playerTurn (int index);
+    int currentPlayer;
+
+    QFont customFont;
+    QPushButton* currentButton;
+    QMessageBox invalidChioce;
 
     int winCombinations[8][3] = {{0,3,6}, {0,1,2}, {2,5,8}, {6,7,8}, {0,4,8},{2,4,6},{3,4,5}, {1,4,7}};
     void gameReset();
@@ -65,6 +76,9 @@ private:
     int easyLevelAi();
     void mediumLevelAi();
     void hardLevelAi();
+    void setTurnButton();
+
+
 
 };
 

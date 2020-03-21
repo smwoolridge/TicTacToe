@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
 
+
 }
 
 MainWindow::~MainWindow()
@@ -137,9 +138,6 @@ void MainWindow::hardLevelAi()
 }
 
 
-
-
-
 void MainWindow::on_onePlayerButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
@@ -170,128 +168,108 @@ void MainWindow::on_startButton_clicked()
     ui->stackedWidget->setCurrentIndex(2);
 }
 
-void MainWindow::on_l1_00_clicked()
-{
+void MainWindow::setTurnButton(){
+    QFont customFont("Helvetica[Cronyx]", 20,75,false);
     if(gameIsDone){
         gameReset();
     }
-    int player = playerTurn(0);
-        if(player == 1){
-            ui->l1_00->setText("X");
-           } else if (player == 2){
-            ui-> l1_00->setText("O");
+    if(currentButton->text()!= "X" && currentButton->text()!= "O"){
+        if(currentPlayer == 1){
+            currentButton->setText("X");
+            currentButton->setFont(customFont);
+            currentButton->setEnabled(false);
+        } else if (currentPlayer == 2) {
+           currentButton->setText("O");
+           currentButton->setFont(customFont);
+           currentButton->setEnabled(false);
         }
-        gameIsDone = checkForWinner(buttonClicked, player);
+    }
+}
+
+void MainWindow::on_l1_00_clicked()
+{
+    currentPlayer = playerTurn(0);
+    currentButton = ui->l1_00;
+    setTurnButton();
+    gameIsDone = checkForWinner(buttonClicked, currentPlayer);
 }
 
 void MainWindow::on_l1_10_clicked()
 {
-    if(gameIsDone){
-        gameReset();
-    }
-    int player = playerTurn(1);
-        if(player == 1){
-            ui->l1_10->setText("X");
-           } else if (player == 2){
-            ui-> l1_10->setText("O");
-        }
-        gameIsDone = checkForWinner(buttonClicked, player);
+    currentPlayer= playerTurn(1);
+    currentButton = ui->l1_10;
+    setTurnButton();
+    gameIsDone = checkForWinner(buttonClicked, currentPlayer);
 }
 
 void MainWindow::on_l1_20_clicked()
 {
-    if(gameIsDone){
-        gameReset();
-    }
-    int player = playerTurn(2);
-        if(player == 1){
-            ui->l1_20->setText("X");
-           } else if (player == 2){
-            ui-> l1_20->setText("O");
-        }
-        gameIsDone = checkForWinner(buttonClicked, player);
+    currentPlayer= playerTurn(2);
+    currentButton = ui->l1_20;
+    setTurnButton();
+    gameIsDone = checkForWinner(buttonClicked, currentPlayer);
 }
 
 void MainWindow::on_l1_01_clicked()
 {
-    if(gameIsDone){
-        gameReset();
-    }
-    int player = playerTurn(3);
-        if(player == 1){
-            ui->l1_01->setText("X");
-           } else if (player == 2){
-            ui-> l1_01->setText("O");
-        }
-        gameIsDone = checkForWinner(buttonClicked, player);
+    currentPlayer = playerTurn(3);
+    currentButton = ui->l1_01;
+    setTurnButton();
+    gameIsDone = checkForWinner(buttonClicked, currentPlayer);
 }
 
 void MainWindow::on_l1_11_clicked()
 {
-    if(gameIsDone){
-        gameReset();
-    }
-    int player = playerTurn(4);
-        if(player == 1){
-            ui->l1_11->setText("X");
-           } else if (player == 2){
-            ui-> l1_11->setText("O");
-        }
-        gameIsDone = checkForWinner(buttonClicked, player);
+    currentPlayer = playerTurn(4);
+    currentButton = ui->l1_11;
+    setTurnButton();
+    gameIsDone = checkForWinner(buttonClicked, currentPlayer);
 }
 
 void MainWindow::on_l1_21_clicked()
 {
-    if(gameIsDone){
-        gameReset();
-    }
-    int player = playerTurn(5);
-        if(player == 1){
-            ui->l1_21->setText("X");
-           } else if (player == 2){
-            ui-> l1_21->setText("O");
-        }
-        gameIsDone = checkForWinner(buttonClicked, player);
+    currentPlayer = playerTurn(5);
+    currentButton = ui->l1_21;
+    setTurnButton();
+    gameIsDone = checkForWinner(buttonClicked, currentPlayer);
 }
 
 void MainWindow::on_l1_02_clicked()
 {
-    if(gameIsDone){
-        gameReset();
-    }
-    int player = playerTurn(6);
-        if(player == 1){
-            ui->l1_02->setText("X");
-           } else if (player == 2){
-            ui-> l1_02->setText("O");
-        }
-        gameIsDone = checkForWinner(buttonClicked, player);
+    currentPlayer = playerTurn(6);
+    currentButton = ui->l1_02;
+    setTurnButton();
+    gameIsDone = checkForWinner(buttonClicked, currentPlayer);
 }
 
 void MainWindow::on_l1_12_clicked()
 {
-    if(gameIsDone){
-        gameReset();
-    }
-    int player = playerTurn(7);
-        if(player == 1){
-            ui->l1_12->setText("X");
-           } else if (player == 2){
-            ui-> l1_12->setText("O");
-        }
-        gameIsDone = checkForWinner(buttonClicked, player);
+    currentPlayer = playerTurn(7);
+    currentButton = ui->l1_12;
+    setTurnButton();
+    gameIsDone = checkForWinner(buttonClicked, currentPlayer);
 }
 
 void MainWindow::on_l1_22_clicked()
 {
-    if(gameIsDone){
-        gameReset();
-    }
-    int player = playerTurn(8);
-        if(player == 1){
-            ui->l1_22->setText("X");
-           } else if (player == 2){
-            ui-> l1_22->setText("O");
-        }
-        gameIsDone = checkForWinner(buttonClicked, player);
+    currentPlayer = playerTurn(8);
+    currentButton = ui->l1_22;
+    setTurnButton();
+    gameIsDone = checkForWinner(buttonClicked, currentPlayer);
+}
+
+void MainWindow::on_help_button_clicked()
+{
+    QMessageBox::information(
+            this,
+            tr("Tic Tac Toe Ultimate Rules"),
+            tr("1. The game is played on a 3 by 3, 4 by 4 or 5 by 5 grid.\n\n"
+               "2. Player 1 is X, Player 2 (or the computer) is O. Players take turns putting their marks in empty squares.\n\n"
+               "3. The first player to get 3, 4 or 5 (depending on the level) of their marks in a row (up, down, across, or diagonally) is the winner.\n\n"
+               "4. If no player has 3, 4 or 5 marks in a row, when all squares are full the game is over, and the game ends in a tie.") );
+}
+
+void MainWindow::on_backButton_names_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
 }
