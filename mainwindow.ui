@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="page">
      <widget class="QPushButton" name="easyButton">
@@ -66,7 +66,7 @@
        <string>Hard</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="backButton_levels">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -117,7 +117,7 @@
        </rect>
       </property>
      </widget>
-     <widget class="QPushButton" name="backButton">
+     <widget class="QPushButton" name="backButton_names">
       <property name="geometry">
        <rect>
         <x>30</x>
@@ -145,7 +145,7 @@
      </widget>
     </widget>
     <widget class="QWidget" name="page_4">
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="level1_label">
       <property name="geometry">
        <rect>
         <x>60</x>
@@ -329,7 +329,7 @@
        <string/>
       </property>
      </widget>
-     <widget class="QLabel" name="level2_banner">
+     <widget class="QLabel" name="level2_label">
       <property name="geometry">
        <rect>
         <x>60</x>
@@ -552,7 +552,7 @@
      </widget>
     </widget>
     <widget class="QWidget" name="page_11">
-     <widget class="QLabel" name="label_5">
+     <widget class="QLabel" name="level3_label">
       <property name="geometry">
        <rect>
         <x>60</x>
@@ -947,7 +947,7 @@
        <string>Two Players</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QPushButton" name="help_button">
       <property name="geometry">
        <rect>
         <x>450</x>
@@ -969,7 +969,7 @@
      <x>0</x>
      <y>0</y>
      <width>600</width>
-     <height>22</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>
