@@ -6,9 +6,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
-
-
 }
 
 MainWindow::~MainWindow()
@@ -57,14 +54,14 @@ int MainWindow::playerTurn(int index)
         case 1:
 
             // switch label to player 2
-            ui->level1_label->setText(playerTwo);
+            ui->level1_label->setText(playerTwo + "'s Turn");
             ui->level1_label->setFont(customFont);
             //change current index 1
             buttonClicked[index] = 1;
             return 1;
         case 0:
             // switch label to player 1
-            ui->level1_label->setText(playerOne);
+            ui->level1_label->setText(playerOne + "'s Turn");
             ui->level1_label->setFont(customFont);
             // change current index 2
             buttonClicked[index] = 2;
@@ -98,36 +95,68 @@ void MainWindow::gameReset()
     gameIsDone = false;
 }
 
-
 // find the next zero in the array and add a button there
-int MainWindow::easyLevelAi()
+void MainWindow::easyLevelAi()
 {
-    for(int i = 0; i < 9; i++){
-        if (buttonClicked[i] == 0){
-            return i;
-               }
-        if(i == 0){
-            ui->l1_00->setText("O");
-        } else if(i == 1){
-            ui->l1_10->setText("O");
-        } else if(i == 2){
-            ui->l1_20->setText("O");
-        } else if(i == 3){
-            ui->l1_01->setText("O");
-        } else if(i == 4){
-            ui->l1_11->setText("O");
-        } else if(i == 5){
-            ui->l1_21->setText("O");
-        } else if(i == 6){
-            ui->l1_02->setText("O");
-        } else if(i == 7){
-           ui->l1_12->setText("O");
-        } else if(i == 8){
-            ui->l1_22->setText("O");
-        }
-        }
-    }
 
+
+    if(ui->l1_00->text() != "X" && ui->l1_00->text()!= "O"){
+        currentButton = ui->l1_00;
+            if(ui->l1_10->text() != "X" && ui->l1_10->text()!= "O"){
+                currentButton = ui->l1_10;
+                if(ui->l1_20->text() != "X" && ui->l1_20->text()!= "O"){
+                    currentButton = ui->l1_20;
+                    if(ui->l1_01->text() != "X" && ui->l1_01->text()!= "O"){
+                        currentButton = ui->l1_01;
+                        if(ui->l1_11->text() != "X" && ui->l1_11->text()!= "O"){
+                            currentButton = ui->l1_11;
+                            if(ui->l1_21->text() != "X" && ui->l1_21->text()!= "O"){
+                                currentButton = ui->l1_21;
+                                if(ui->l1_02->text() != "X" && ui->l1_02->text()!= "O"){
+                                    currentButton = ui->l1_02;
+                                    if(ui->l1_12->text() != "X" && ui->l1_12->text()!= "O"){
+                                        currentButton = ui->l1_12;
+                                        if(ui->l1_22->text() != "X" && ui->l1_22->text()!= "O"){
+                                            currentButton = ui->l1_22;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    //mutex.lock();
+    //mutex.tryLock(1000);
+    //mutex.unlock();
+    currentButton->setText("O");
+    currentButton->setFont(customFont);
+    currentButton->setEnabled(false);
+    clickCount++;
+
+}
+
+
+
+
+
+void MainWindow::setCharlieTurn(){
+    QFont customFont("Helvetica[Cronyx]", 20,75,false);
+    if(gameIsDone){
+        gameReset();
+    }
+    if(currentButton->text()!= "X" && currentButton->text()!= "O"){
+        currentButton->setText("X");
+        currentButton->setFont(customFont);
+        currentButton->setEnabled(false);
+        //mutex.lock();
+        //mutex.tryLock(1000);
+        //mutex.unlock();
+        easyLevelAi();
+        }
+
+}
 
 
 void MainWindow::mediumLevelAi()
@@ -144,11 +173,24 @@ void MainWindow::hardLevelAi()
 void MainWindow::on_onePlayerButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
+    ui->playerTwoTextEdit->setText("Charlie");
+    ui->playerTwoTextEdit->setReadOnly(true);
+
+    charlieEnabled = true;
+
+    ui->playerOneTextEdit->setPlaceholderText("Player One");
+
 }
 
 void MainWindow::on_twoPlayerButton_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
+
+    charlieEnabled = false;
+
+    ui->playerOneTextEdit->setPlaceholderText("Player One");
+    ui->playerTwoTextEdit->setPlaceholderText("Player Two");
+
 }
 
 void MainWindow::on_easyButton_clicked()
@@ -182,9 +224,14 @@ void MainWindow::setTurnButton(){
             currentButton->setFont(customFont);
             currentButton->setEnabled(false);
         } else if (currentPlayer == 2) {
+            if(!charlieEnabled){
            currentButton->setText("O");
            currentButton->setFont(customFont);
            currentButton->setEnabled(false);
+            }
+            else{
+                setCharlieTurn();
+            }
         }
     }
 }
@@ -192,9 +239,10 @@ void MainWindow::setTurnButton(){
 void MainWindow::on_l1_00_clicked()
 {
     currentPlayer = playerTurn(0);
+    gameIsDone = checkForWinner(buttonClicked, currentPlayer);
     currentButton = ui->l1_00;
     setTurnButton();
-    gameIsDone = checkForWinner(buttonClicked, currentPlayer);
+
 }
 
 void MainWindow::on_l1_10_clicked()
