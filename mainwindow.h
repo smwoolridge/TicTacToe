@@ -59,6 +59,8 @@ private slots:
 
      void on_backButton_names_clicked();
 
+     void on_backButton_levels_clicked();
+
 private:
     Ui::MainWindow *ui;
     int clickCount = 0;

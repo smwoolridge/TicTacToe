@@ -100,40 +100,7 @@ void MainWindow::easyLevelAi()
 {
 
 
-    if(ui->l1_00->text() != "X" && ui->l1_00->text()!= "O"){
-        currentButton = ui->l1_00;
-            if(ui->l1_10->text() != "X" && ui->l1_10->text()!= "O"){
-                currentButton = ui->l1_10;
-                if(ui->l1_20->text() != "X" && ui->l1_20->text()!= "O"){
-                    currentButton = ui->l1_20;
-                    if(ui->l1_01->text() != "X" && ui->l1_01->text()!= "O"){
-                        currentButton = ui->l1_01;
-                        if(ui->l1_11->text() != "X" && ui->l1_11->text()!= "O"){
-                            currentButton = ui->l1_11;
-                            if(ui->l1_21->text() != "X" && ui->l1_21->text()!= "O"){
-                                currentButton = ui->l1_21;
-                                if(ui->l1_02->text() != "X" && ui->l1_02->text()!= "O"){
-                                    currentButton = ui->l1_02;
-                                    if(ui->l1_12->text() != "X" && ui->l1_12->text()!= "O"){
-                                        currentButton = ui->l1_12;
-                                        if(ui->l1_22->text() != "X" && ui->l1_22->text()!= "O"){
-                                            currentButton = ui->l1_22;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    //mutex.lock();
-    //mutex.tryLock(1000);
-    //mutex.unlock();
-    currentButton->setText("O");
-    currentButton->setFont(customFont);
-    currentButton->setEnabled(false);
-    clickCount++;
+
 
 }
 
@@ -231,6 +198,7 @@ void MainWindow::setTurnButton(){
             }
             else{
                 setCharlieTurn();
+                clickCount++;
             }
         }
     }
@@ -315,7 +283,7 @@ void MainWindow::on_help_button_clicked()
             this,
             tr("Tic Tac Toe Ultimate Rules"),
             tr("1. The game is played on a 3 by 3, 4 by 4 or 5 by 5 grid.\n\n"
-               "2. Player 1 is X, Player 2 (or the computer) is O. Players take turns putting their marks in empty squares.\n\n"
+               "2. Player 1 is X, Player 2 (or \"Charlie\") is O. Players take turns putting their marks in empty squares.\n\n"
                "3. The first player to get 3, 4 or 5 (depending on the level) of their marks in a row (up, down, across, or diagonally) is the winner.\n\n"
                "4. If no player has 3, 4 or 5 marks in a row, when all squares are full the game is over, and the game ends in a tie.") );
 }
@@ -323,4 +291,9 @@ void MainWindow::on_help_button_clicked()
 void MainWindow::on_backButton_names_clicked()
 {
     ui->stackedWidget->setCurrentIndex(0);
+}
+
+void MainWindow::on_backButton_levels_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(5);
 }
