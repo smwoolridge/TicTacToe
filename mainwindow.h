@@ -81,7 +81,7 @@ private:
     bool gameIsDone = false;
     bool charlieTurnOver;
 
-    void easyLevelAi();
+    void easyLevelAi(int);
     void setCharlieTurn();
 
     void mediumLevelAi();

@@ -96,7 +96,7 @@ void MainWindow::gameReset()
 }
 
 // find the next zero in the array and add a button there
-void MainWindow::easyLevelAi()
+void MainWindow::easyLevelAi(int button)
 {
 
 
@@ -120,7 +120,7 @@ void MainWindow::setCharlieTurn(){
         //mutex.lock();
         //mutex.tryLock(1000);
         //mutex.unlock();
-        easyLevelAi();
+        //easyLevelAi();
         }
 
 }
